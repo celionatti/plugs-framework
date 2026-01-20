@@ -34,6 +34,7 @@ $generator->createFolders($directories);
 
 // 2. Create Files
 $generator->createFile('.env', $generator->generateEnv($_SESSION['db']));
+$generator->createFile('bootstrap/boot.php', $generator->generateBootstrapBoot());
 $generator->createFile('config/app.php', $generator->generateAppConfig());
 $generator->createFile('config/auth.php', $generator->generateAuthConfig());
 $generator->createFile('config/database.php', $generator->generateDatabaseConfig());
@@ -42,6 +43,7 @@ $generator->createFile('config/mail.php', $generator->generateMailConfig());
 $generator->createFile('config/middleware.php', $generator->generateMiddlewareConfig());
 $generator->createFile('config/security.php', $generator->generateSecurityConfig());
 $generator->createFile('config/services.php', $generator->generateServicesConfig());
+$generator->createFile('routes/web.php', $generator->generateWebRoutes());
 $generator->createFile('theplug', $generator->generateThePlug());
 
 // 5. Setup Database & Admin User
